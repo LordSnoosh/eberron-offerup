@@ -5,7 +5,8 @@ module.exports = {
     index,
     show,
     new: newListing,
-    create
+    create,
+    deleteListing,
   };
 
   function index(req, res) {
@@ -35,6 +36,13 @@ module.exports = {
         if (err) console.log(err);
         res.redirect('/listings');
     })
+};
+
+function deleteListing(req, res) {
+  Listing.findByIdAndDelete(req.params.id, function(err, deletedListing) {
+      if (err) console.log(err)
+  })
+  res.redirect('/listings');
 }
 
 // function create(req, res) {

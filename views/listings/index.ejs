@@ -2,6 +2,7 @@
 <table id="list">
   <thead>
     <tr>
+      <th></th>
       <th>Title</th>
       <th>Meeting<br>Place</th>
       <th></th>
@@ -10,6 +11,10 @@
   <tbody>
     <% listings.forEach(function(l) { %>
       <tr>
+        <td><form action="/listings/<%= l.id %>?_method=DELETE"
+          class="delete-form" method="POST">
+          <button type="submit">X</button>
+        </form></td>
         <td><%= l.title %></td>
         <td><%= l.meetingPlace %></td>
         <td><a href="/listings/<%= l._id %>">DETAILS</a></td>
