@@ -2,16 +2,31 @@
 
 <p>Please first ensure that the Mercenary is not in the dropdown
   <select>
-    <% mercenaries.forEach(function(p) { %>
-      <option><%= p.name %></option>
+    <% mercenaries.forEach(function(m) { %>
+      <option><%= m.name %></option>
     <% }) %>
   </select>
 </p>
 <form id="add-mercenary-form" action="/mercenaries" method="POST">
   <label>Name:</label>
   <input type="text" name="name">
-  <label>Born:</label>
-  <input type="date" name="born">
+  <label>Mercenary Class:</label>
+  <select name="characterClass">
+    <option value="ARTIFICER">Artificer</option>
+    <option value="BARD">Bard</option>
+    <option value="BLOOD-HUNTER">Blood Hunter</option>
+    <option value="CLERIC">Cleric</option>
+    <option value="DRUID">Druid</option>
+    <option value="FIGHTER">Fighter</option>
+    <option value="FURY-FIGHTER">Fury Fighter</option>
+    <option value="MARTIAL-ARTIST">Martial Artist</option>
+    <option value="PALADIN">Paladin</option>
+    <option value="RANGER">Ranger</option>
+    <option value="ROGUE"">Rogue</option>
+    <option value="SORCERER">Sorcerer</option>
+    <option value="WARLOCK">Warlock</option>
+    <option value="WIZARD">Wizard</option>
+  </select>
   <input type="submit" value="Add Mercenary">
 </form>
 

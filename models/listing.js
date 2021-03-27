@@ -16,15 +16,13 @@ var listingSchema = new Schema({
         type: String,
         required: true
       },
-      releaseYear: {
-        type: Number,
-        default: function () {
-          return new Date().getFullYear();
-        }
+      meetingPlace: {
+        type: String,
+        required: true,
       },
-      mpaaRating: String,
-      cast: [{type: Schema.Types.ObjectId, ref: 'Mercenary'}],
-      nowShowing: { type: Boolean, default: false },
+      challengeRating: String,
+      party: [{type: Schema.Types.ObjectId, ref: 'Mercenary'}],
+      // isDanger: Boolean,
       reviews: [reviewSchema]
     }, {
       timestamps: true

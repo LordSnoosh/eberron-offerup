@@ -3,7 +3,7 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Release<br>Year</th>
+      <th>Meeting<br>Place</th>
       <th></th>
     </tr>
   </thead>
@@ -11,7 +11,7 @@
     <% listings.forEach(function(l) { %>
       <tr>
         <td><%= l.title %></td>
-        <td><%= l.releaseYear %></td>
+        <td><%= l.meetingPlace %></td>
         <td><a href="/listings/<%= l._id %>">DETAILS</a></td>
       </tr>
       <% }); %>

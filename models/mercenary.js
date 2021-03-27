@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const mercenarySchema = new Schema({
   name: {type: String, required: true, unique: true},
-  born: Date
+  characterClass: String,
 }, {
   timestamps: true
 });
