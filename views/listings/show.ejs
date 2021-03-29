@@ -9,11 +9,8 @@
   <div><%= listing.challengeRating %></div>
   <div>Recommended Professions: </div>
   <ul>
-    <%= listing.recClass.map(c =>
-    '<li value="${c._id}">$c.name</li>'
-    ).join('') %>
+    <li><%= listing.recClass %></li>
   </ul>
-  
   <div>Party:</div>
   <ul>
     <%- listing.party.map(m => 
