@@ -1,5 +1,5 @@
-const Mercenary = require('../models/mercenary');
-const Listing = require('../models/listing');
+var Mercenary = require('../models/mercenary');
+var Listing = require('../models/listing');
 
 module.exports = {
   new: newMercenary,

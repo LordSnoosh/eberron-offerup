@@ -8,7 +8,11 @@
   <div>Challenge Rating: </div>
   <div><%= listing.challengeRating %></div>
   <div>Recommended Professions: </div>
-  <div><%= listing.recClass %></div>
+  <ul>
+    <%= listing.recClass.map(c =>
+    '<li value="${c._id}">$c.name</li>'
+    ).join('') %>
+  </ul>
   
   <div>Party:</div>
   <ul>
