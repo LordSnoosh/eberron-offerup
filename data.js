@@ -1,4 +1,4 @@
-exports.PcClass = [
+exports.pcclass = [
   { name: "ARTIFICER" },
   { name: "BARD" },
   { name: "BLOOD HUNTER" },
