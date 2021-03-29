@@ -1,4 +1,4 @@
-exports.mercClass = [
+exports.PcClass = [
   { name: "ARTIFICER" },
   { name: "BARD" },
   { name: "BLOOD HUNTER" },
