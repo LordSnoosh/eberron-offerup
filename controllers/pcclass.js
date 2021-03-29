@@ -1,1 +1,1 @@
-var PcClass = require('../models/pcClass');
+var PcClass = require('../models/pcclass');
