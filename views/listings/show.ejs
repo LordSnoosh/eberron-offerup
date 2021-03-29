@@ -14,7 +14,7 @@
   <div>Party:</div>
   <ul>
     <%- listing.party.map(m => 
-      `<li value="${m._id}">${m.name}</li>`
+      `<li value="${m._id}">${m.name}, ${m.characterClass}</li>`
     ).join('') %>
   </ul>
  

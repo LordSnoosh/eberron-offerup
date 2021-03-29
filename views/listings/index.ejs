@@ -11,6 +11,7 @@
   <tbody>
     <% listings.forEach(function(l) { %>
       <tr>
+        
         <td><form action="/listings/<%= l.id %>?_method=DELETE"
           class="delete-form" method="POST">
           <button type="submit">X</button>

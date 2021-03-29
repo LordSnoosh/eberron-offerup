@@ -12,15 +12,7 @@
     <option value="MODERATE">Moderate</option>
     <option value="HIGH">High</option>
   </select>
-  <label>Recommended Professions</label>
-  <form id="add-recclass-to-reclist" action="/listings/<%= listing._id %>/mercenaries" method="POST">
-    <select name="pcclassId">
-      <%- mercenaries.map(m => 
-        `<option value="${m._id}">${m.name}</option>`
-      ).join('') %>
-    </select>
-    <button type="submit">Add to Party</button>
-  </form>
+  <label>Recommended Profession</label>
   <select name="recClass">
     <option value="ARTIFICER">Artificer</option>
     <option value="BARD">Bard</option>
@@ -36,7 +28,7 @@
     <option value="SORCERER">Sorcerer</option>
     <option value="WARLOCK">Warlock</option>
     <option value="WIZARD">Wizard</option>
-  </select><input type="submit" value="Add Profession">
+  </select>
   <input type="submit" value="Add Listing">
 </form>
 
