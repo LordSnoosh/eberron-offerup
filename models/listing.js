@@ -21,6 +21,7 @@ var listingSchema = new Schema({
         required: true,
       },
       challengeRating: String,
+      recomendedClass: String,
       party: [{type: Schema.Types.ObjectId, ref: 'Mercenary'}],
       // isDanger: Boolean,
       reviews: [reviewSchema]
