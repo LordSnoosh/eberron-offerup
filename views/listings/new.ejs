@@ -12,8 +12,32 @@
     <option value="MODERATE">Moderate</option>
     <option value="HIGH">High</option>
   </select>
-  <label>Is this Dangerous?:</label>
-  <input type="checkbox" name="isDanger" checked>
+  <label>Recommended Professions</label>
+  <select name="recClass">
+    <option value="ARTIFICER">Artificer</option>
+    <option value="BARD">Bard</option>
+    <option value="BLOOD-HUNTER">Blood Hunter</option>
+    <option value="CLERIC">Cleric</option>
+    <option value="DRUID">Druid</option>
+    <option value="FIGHTER">Fighter</option>
+    <option value="FURY-FIGHTER">Fury Fighter</option>
+    <option value="MARTIAL-ARTIST">Martial Artist</option>
+    <option value="PALADIN">Paladin</option>
+    <option value="RANGER">Ranger</option>
+    <option value="ROGUE"">Rogue</option>
+    <option value="SORCERER">Sorcerer</option>
+    <option value="WARLOCK">Warlock</option>
+    <option value="WIZARD">Wizard</option>
+  </select>
+  <form id="add-recClass-to-recList" action="/listings/<%= listing._id %>/mercenaries" method="POST">
+    <select name="mercenaryId">
+      <%- mercenaries.map(m => 
+        `<option value="${m._id}">${m.name}</option>`
+      ).join('') %>
+    </select>
+    <button type="submit">Add to Party</button>
+  </form>
+
   <input type="submit" value="Add Listing">
 </form>
 
