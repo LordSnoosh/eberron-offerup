@@ -28,7 +28,6 @@
   </select>
   <button type="submit">Add to Party</button>
 </form>
-
 <br><br>
 <% if (user) { %>
 <h2>Reviews</h2>
@@ -47,6 +46,8 @@
 </form>
 <% } %>
 
+
+
 <% if (listing.reviews.length) { %>
   <table>
     <thead>
@@ -58,7 +59,7 @@
         <th></th>
       </tr>
     </thead>
-    
+
     <tbody>
       <% let total = 0 %>
       <% listing.reviews.forEach(function(r) { %>
