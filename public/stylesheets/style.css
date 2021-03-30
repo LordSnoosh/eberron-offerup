@@ -43,6 +43,12 @@ body > main h1:first-child {
   margin-bottom: 50px;
 }
 
+#homeDragon {
+  width: 97vmin;
+  object-fit: contain;
+  margin-bottom: auto;
+}
+
 nav > a {
   margin: 20px;
   text-decoration: none;
