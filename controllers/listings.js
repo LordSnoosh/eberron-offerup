@@ -43,10 +43,6 @@ function create(req, res) {
   });
 }
 
-// function deleteListing(req, res) {
-//   Listing.findOne({'listing'})
-// }
-
 function deleteListing(req, res) {
   Listing.findByIdAndDelete(req.params.id, function (err, deletedListing) {
     if (err) console.log(err);
