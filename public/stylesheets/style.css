@@ -44,7 +44,7 @@ body > main h1:first-child {
 }
 
 #homeDragon {
-  width: 97vmin;
+  width: 56vmin;
   object-fit: contain;
   margin-bottom: auto;
 }
