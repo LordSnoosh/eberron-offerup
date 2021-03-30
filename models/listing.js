@@ -24,6 +24,7 @@ var listingSchema = new Schema({
       recClass: String,
       party: [{type: Schema.Types.ObjectId, ref: 'Mercenary'}],
       RecList: [],
+      user: {type: Schema.Types.ObjectId, ref: 'User'},
       reviews: [reviewSchema]
     }, {
       timestamps: true

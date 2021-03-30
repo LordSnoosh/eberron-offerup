@@ -13,11 +13,11 @@
     <% listings.forEach(function(l) { %>
       <tr>
         <td>
-          
+          <% if (user && user._id.equals(l.user)) { %>
             <form action="/listings/<%= l._id %>?_method=DELETE" method="POST">
-              <button type="submit">Remove</button>
+              <button type="submit">REMOVE</button>
             </form>
-          
+            <% } %>
         </td>
         <td><%= l.title %></td>
         <td><%= l.meetingPlace %></td>

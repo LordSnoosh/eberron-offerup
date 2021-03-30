@@ -37,15 +37,46 @@ function newListing(req, res) {
 }
 
 function create(req, res) {
-  Listing.create(req.body, function (err, listing) {
-    if (err) console.log(err);
-    res.redirect("/listings");
+  const listing = new Listing(req.body);
+  // Assign the logged in user's id
+  listing.user = req.user._id;
+  listing.save(function(err) {
+    // Probably want to go to newly added book's show view
+    res.redirect(`/listings/${listing._id}`);
   });
 }
 
+// function create(req, res) {
+//   Listing.create(req.body, function (err, listing) {
+//     if (err) console.log(err);
+//     res.redirect("/listings");
+//   });
+// }
+
 function deleteListing(req, res) {
-  Listing.findByIdAndDelete(req.params.id, function (err, deletedListing) {
-    if (err) console.log(err);
-  });
-  res.redirect("/listings");
+  Listing.findOneAndDelete(
+    // Ensue that the book was created by the logged in user
+    {_id: req.params.id, user: req.user._id}, function(err) {
+      // Deleted book, so must redirect to index
+      res.redirect('/listings');
+    }
+  );
 }
+
+// function deleteListing(req, res, next) {
+//   Listing.findOne({'listing._id': req.params.id}) 
+//     if (!listing.user.equals(req.user._id));
+//     listing.remove().then(function() {
+//       res.redirect("/");
+//     }).catch(function(err) {
+//       return next(err);
+//     });
+//   };
+
+
+// function deleteListing(req, res) {
+//   Listing.findByIdAndDelete(req.params.id, function (err, deletedListing) {
+//     if (err) console.log(err);
+//   });
+//   res.redirect("/listings");
+// }
