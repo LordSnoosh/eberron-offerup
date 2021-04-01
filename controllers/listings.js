@@ -7,8 +7,6 @@ module.exports = {
   new: newListing,
   create,
   delete: deleteListing,
-  edit,
-  update,
 };
 
 function index(req, res) {
@@ -47,24 +45,6 @@ function create(req, res) {
     res.redirect(`/listings/${listing._id}`);
   });
 };
-
-function update(req, res) {
-  listing.findOne({'listing._id': req.params.id}, function(err, listing) {
-    const list = listing.content(req.params.id);
-    if (!listing.user._id.equals(req.user._id)) return res.redirect(`/listings/${listing._id}`);
-    Object.assign(list, req.content);
-    listing.save(function(err) {
-      res.redirect(`/listings/${listing._id}`);
-    });
-  });
-}
-
-function edit(req, res) {
-  Listing.findOne({_id: req.params.id, user: req.user._id}, function(err, listing) {
-    if (err || !listing) return res.redirect('/listings');
-    res.render('listings/edit', {listing});
-  });
-}
 
 function deleteListing(req, res) {
   Listing.findOneAndDelete(
