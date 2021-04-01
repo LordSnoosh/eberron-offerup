@@ -2,9 +2,19 @@
 
     <% listing.reviews.forEach(function(r) { %>
 <form action="/reviews/<%= r._id %>?_method=PUT" method="POST">
-    <input name="content" value="<%= %>">
+    <label>Review:</label>
+  <textarea name="content"></textarea>
+  <label>Rating:</label>
+  <select name="rating">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  <br>
     <button type="submit">UPDATE COMMENT</button>
   </form>
   <% }) %>
-  
+
   <%- include('../partials/footer') %>
