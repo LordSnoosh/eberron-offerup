@@ -1,9 +1,9 @@
-<%- include('../partials/header') %>
-
-    <% listing.reviews.forEach(function(r) { %>
+<%- include('../partials/header') %> <% listing.reviews.forEach(function(r) { %>
 <form action="/reviews/<%= r._id %>?_method=PUT" method="POST">
-    <label>Review:</label>
+  <label>Review:</label>
+  <br />
   <textarea name="content"></textarea>
+  <br /><br />
   <label>Rating:</label>
   <select name="rating">
     <option value="1">1</option>
@@ -12,9 +12,7 @@
     <option value="4">4</option>
     <option value="5">5</option>
   </select>
-  <br>
-    <button type="submit">UPDATE COMMENT</button>
-  </form>
-  <% }) %>
-
-  <%- include('../partials/footer') %>
+  <br />
+  <button type="submit">UPDATE COMMENT</button>
+</form>
+<% }) %> <%- include('../partials/footer') %>

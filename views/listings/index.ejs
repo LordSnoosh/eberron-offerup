@@ -1,30 +1,30 @@
 <%- include('../partials/header') %>
+
 <table id="list">
   <thead>
     <tr>
       <th></th>
       <th>Title</th>
-      <th>Meeting<br>Place</th>
+      <th>Meeting<br />Place</th>
       <th></th>
     </tr>
   </thead>
-
   <tbody>
     <% listings.forEach(function(l) { %>
-      <tr>
-        <td>
-          <% if (user && user._id.equals(l.user)) { %>
-            <form action="/listings/<%= l._id %>?_method=DELETE" method="POST">
-              <button type="submit">REMOVE</button>
-            </form>
-            <% } %>
-        </td>
-        <td><%= l.title %></td>
-        <td><%= l.meetingPlace %></td>
-        <td><a href="/listings/<%= l._id %>">DETAILS</a></td>
-      </tr>
-      <% }); %>
-    </tbody>
-  </table>
-  
+    <tr>
+      <td>
+        <% if (user && user._id.equals(l.user)) { %>
+        <form action="/listings/<%= l._id %>?_method=DELETE" method="POST">
+          <button type="submit">REMOVE</button>
+        </form>
+        <% } %>
+      </td>
+      <td><%= l.title %></td>
+      <td><%= l.meetingPlace %></td>
+      <td><a href="/listings/<%= l._id %>">DETAILS</a></td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>
+
 <%- include('../partials/footer') %>

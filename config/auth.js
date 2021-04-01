@@ -1,5 +1,4 @@
-
 module.exports = function isLoggedIn(req, res, next) {
-    if ( req.isAuthenticated() ) return next();
-    res.redirect('/auth/google');
-  }
+  if (req.isAuthenticated()) return next();
+  res.redirect("/auth/google");
+};

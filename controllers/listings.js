@@ -41,21 +41,22 @@ function create(req, res) {
   listing.user = req.user._id;
   listing.name = req.user.userName;
   listing.avatar = req.user.userAvatar;
-  listing.save(function(err) {
+  listing.save(function (err) {
     res.redirect(`/listings/${listing._id}`);
   });
-};
+}
 
 function deleteListing(req, res) {
   Listing.findOneAndDelete(
-    {_id: req.params.id, user: req.user._id}, function(err) {
-      res.redirect('/listings');
+    { _id: req.params.id, user: req.user._id },
+    function (err) {
+      res.redirect("/listings");
     }
   );
-};
+}
 
 // This function along with removing the IF statement
-// in index.ejs allows full delete
+// in index.ejs allows admin delete cred
 // function deleteListing(req, res) {
 //   Listing.findByIdAndDelete(req.params.id, function (err, deletedListing) {
 //     if (err) console.log(err);

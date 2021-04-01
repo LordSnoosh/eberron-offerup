@@ -1,36 +1,42 @@
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
-var reviewSchema = new Schema({
-    content: {type: String, required: true},
-    rating: {type: Number, min: 1, max: 5, default: 5},
-    user: {type: Schema.Types.ObjectId, ref: 'User'},
+var reviewSchema = new Schema(
+  {
+    content: { type: String, required: true },
+    rating: { type: Number, min: 1, max: 5, default: 5 },
+    user: { type: Schema.Types.ObjectId, ref: "User" },
     userName: String,
-    userAvatar: String
-  }, {
-    timestamps: true
-});
+    userAvatar: String,
+  },
+  {
+    timestamps: true,
+  }
+);
 
-var listingSchema = new Schema({
+var listingSchema = new Schema(
+  {
     title: {
-        type: String,
-        required: true
-      },
-      meetingPlace: {
-        type: String,
-        required: true,
-      },
-      content: String,
-      challengeRating: String,
-      recClass: String,
-      party: [{type: Schema.Types.ObjectId, ref: 'Mercenary'}],
-      RecList: [],
-      user: {type: Schema.Types.ObjectId, ref: 'User'},
-      userName: String,
-      userAvatoar: String,
-      reviews: [reviewSchema]
-    }, {
-      timestamps: true
-    });
-    
-    module.exports = mongoose.model('Listing', listingSchema);
+      type: String,
+      required: true,
+    },
+    meetingPlace: {
+      type: String,
+      required: true,
+    },
+    content: String,
+    challengeRating: String,
+    recClass: String,
+    party: [{ type: Schema.Types.ObjectId, ref: "Mercenary" }],
+    RecList: [],
+    user: { type: Schema.Types.ObjectId, ref: "User" },
+    userName: String,
+    userAvatoar: String,
+    reviews: [reviewSchema],
+  },
+  {
+    timestamps: true,
+  }
+);
+
+module.exports = mongoose.model("Listing", listingSchema);
