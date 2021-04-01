@@ -17,7 +17,19 @@
       `<li value="${m._id}">${m.name}, ${m.characterClass}</li>`
     ).join('') %>
   </ul>
+  <div>Listing Details:</div>
+  <div><%= listing.content %></div>
 </section>
+
+<br><br>
+<section>
+  <% if (user && user._id.equals(listing.user)) { %>
+    <a href="/listings/<%=listing._id%>/edit">Edit</a>
+    </form>
+  <% } %>
+</section>
+
+<br><br>
 <% if (user && user._id.equals(listing.user)) { %>
 <form id="add-merc-to-party" action="/listings/<%= listing._id %>/mercenaries" method="POST">
   <select name="mercenaryId">

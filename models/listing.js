@@ -20,6 +20,7 @@ var listingSchema = new Schema({
         type: String,
         required: true,
       },
+      content: String,
       challengeRating: String,
       recClass: String,
       party: [{type: Schema.Types.ObjectId, ref: 'Mercenary'}],

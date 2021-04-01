@@ -7,6 +7,8 @@ module.exports = {
   new: newListing,
   create,
   delete: deleteListing,
+  edit,
+  update,
 };
 
 function index(req, res) {
@@ -38,25 +40,39 @@ function newListing(req, res) {
 
 function create(req, res) {
   const listing = new Listing(req.body);
-  // Assign the logged in user's id
   listing.user = req.user._id;
   listing.name = req.user.userName;
   listing.avatar = req.user.userAvatar;
   listing.save(function(err) {
-    // Probably want to go to newly added book's show view
     res.redirect(`/listings/${listing._id}`);
+  });
+};
+
+function update(req, res) {
+  listing.findOne({'listing._id': req.params.id}, function(err, listing) {
+    const list = listing.content(req.params.id);
+    if (!listing.user._id.equals(req.user._id)) return res.redirect(`/listings/${listing._id}`);
+    Object.assign(list, req.content);
+    listing.save(function(err) {
+      res.redirect(`/listings/${listing._id}`);
+    });
+  });
+}
+
+function edit(req, res) {
+  Listing.findOne({_id: req.params.id, user: req.user._id}, function(err, listing) {
+    if (err || !listing) return res.redirect('/listings');
+    res.render('listings/edit', {listing});
   });
 }
 
 function deleteListing(req, res) {
   Listing.findOneAndDelete(
-    // Ensue that the book was created by the logged in user
     {_id: req.params.id, user: req.user._id}, function(err) {
-      // Deleted book, so must redirect to index
       res.redirect('/listings');
     }
   );
-}
+};
 
 // This function along with removing the IF statement
 // in index.ejs allows full delete
