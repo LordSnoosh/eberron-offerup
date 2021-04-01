@@ -39,7 +39,7 @@ body > main {
   overflow-y: scroll;
 }
 
-body > main h1:first-child {
+body > main h1:first-child, h6 {
   margin-bottom: 50px;
 }
 
