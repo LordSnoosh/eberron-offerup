@@ -27,11 +27,11 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 Welcome to the ADVENTURE POST!
 
-------------ABOUT---------------
+**------------ABOUT---------------
 
 Adventure post or more technically, eberron-offerup, is a simple app where you can create fantasy mercenaries and job listings all while rating listings and posting comments!!
 
-------------LANDING PAGE---------------
+*------------LANDING PAGE---------------
 
 ![Landing Page](https://i.imgur.com/N7L3Uae.png)
 ![Landing Page logged in](https://i.imgur.com/Y2ML02r.png)
@@ -39,27 +39,28 @@ Adventure post or more technically, eberron-offerup, is a simple app where you c
 ![Mercenary Page](https://i.imgur.com/Ql1oNsh.png)
 ![Add Listing Page](https://i.imgur.com/lkYnKe0.png)
 
-------------TECHNOLOGIES USED---------------
+**------------TECHNOLOGIES USED---------------
 
-Node.js
-Mongoose
-Express-Generator
-Express-Session
-Passport
-Method-Override
-DotENV
+* Node.js
+* Mongoose
+* Express-Generator
+* Express-Session
+* Passport
+* Method-Override
+* DotENV
 
-------------GETTING STARTED---------------
+**------------GETTING STARTED---------------
 
 https://eberron-offerup.herokuapp.com/
 
-Click on the above link to be directed to the landing page.
-Click "LOG IN" to authenticate via Google.
-Click "ALL LISTINGS" to navigate to the "All Listings" page.
-Click on "DETAILS" button, to navigate to a "Listing Details" page.
-Click on "ADD MERCENARY" to navigate to the "Add Mercenary" page.
-Click "ADD LISTING" to navigate to the "Add listing" page.
+* Click the above link to be directed to the landing page.
+* Click "LOG IN" to authenticate via Google.
+* Click "ALL LISTINGS" to navigate to the "All Listings" page.
+* Click "DETAILS" button, to navigate to a "Listing Details" page.
+* Click "REMOVE" button to delete a listing, the user created.
+* Click "ADD MERCENARY" to navigate to the "Add Mercenary" page.
+* Click "ADD LISTING" to navigate to the "Add listing" page.
 
-------------TRELLO BOARD---------------
+**------------TRELLO BOARD---------------
 
 https://trello.com/b/ppZ7Cw0w/seir-project-2
