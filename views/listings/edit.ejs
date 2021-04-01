@@ -1,37 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
-  <body>
-    <nav>
-      <% if (user) { %>
-        <a href="/listings/">ALL LISTINGS</a>
-        <a href="/logout">LOG OUT</a>
-      <% } else { %>
-        <a href="/auth/google" class="login"
-          >LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"    
-      /></a>
-      <% } %>
-    </nav>
+<%- include('../partials/header') %>
 
-
-<main>
-  <form action="/listings/<%= listing._id %>?_method=PUT" method="POST"> 
-    <input type="text" name="content" id="edit-content" value="<%=listing.content %>">
-    <button type="submit">UPDATE DESCRIPTION</button>
-</form> 
-
-
-</main>
-</body>
-</html>
-    
-
-
-
-
+    <% listing.reviews.forEach(function(r) { %>
+<form action="/reviews/<%= r._id %>?_method=PUT" method="POST">
+    <input name="content" value="<%= %>">
+    <button type="submit">UPDATE COMMENT</button>
+  </form>
+  <% }) %>
   
+  <%- include('../partials/footer') %>

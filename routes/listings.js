@@ -8,6 +8,5 @@ router.get('/new', isLoggedIn, listingsCtrl.new);
 router.get('/:id', listingsCtrl.show);
 router.delete('/:id', isLoggedIn, listingsCtrl.delete);
 router.post('/', isLoggedIn, listingsCtrl.create);
-router.get('/:id/edit', isLoggedIn, listingsCtrl.edit);
-router.put('/:id', isLoggedIn, listingsCtrl.update);
+
 module.exports = router;

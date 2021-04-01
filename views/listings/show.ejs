@@ -22,14 +22,6 @@
 </section>
 
 <br><br>
-<section>
-  <% if (user && user._id.equals(listing.user)) { %>
-    <a href="/listings/<%=listing._id%>/edit">Edit</a>
-    </form>
-  <% } %>
-</section>
-
-<br><br>
 <% if (user && user._id.equals(listing.user)) { %>
 <form id="add-merc-to-party" action="/listings/<%= listing._id %>/mercenaries" method="POST">
   <select name="mercenaryId">
@@ -56,6 +48,7 @@
   </select>
   <input type="submit" value="Add Review">
 </form>
+
 <% } %>
 <% if (listing.reviews.length) { %>
   <table>
@@ -83,6 +76,7 @@
               <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
                 <button type="submit">X</button>
               </form>
+              <a href="/reviews/<%=r._id%>/edit">Edit</a>
             <% } %>
           </td>
         </tr>

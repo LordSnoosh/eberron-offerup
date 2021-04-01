@@ -3,6 +3,8 @@ var Listing = require('../models/listing');
 module.exports = {
   create,
   delete: deleteReview,
+  update: updateReview,
+  edit: editReview,
 };
 
 function deleteReview(req, res, next) {
@@ -31,3 +33,19 @@ function create(req, res) {
     });
   });
 };
+function updateReview(req, res) {
+  Listing.findOne({'reviews._id': req.params.id}, function(err, listing) {
+    const review = listing.reviews.id(req.params.id);
+    if (!review.user._id.equals(req.user._id)) return res.redirect(`/listings/${listing._id}`);
+    Object.assign(review, req.body);
+    listing.save(function(err) {
+      res.redirect(`/listings/${listing._id}`);
+    });
+  });
+}
+
+function editReview(req, res) {
+  Listing.findOne({'reviews._id': req.params.id}, function(err, listing) {
+    res.render('listings/edit',  { title: 'Edit Review', listing});
+  });
+}
