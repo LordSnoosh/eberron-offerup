@@ -1,4 +1,5 @@
-<%- include('../partials/header') %> <% listing.reviews.forEach(function(r) { %>
+<%- include('../partials/header') %> 
+<% listing.reviews.forEach(function(r) { %>
 <form action="/reviews/<%= r._id %>?_method=PUT" method="POST">
   <label>Review:</label>
   <br />
