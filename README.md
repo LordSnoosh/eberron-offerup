@@ -31,7 +31,8 @@ Welcome to the ADVENTURE POST!
 
 ## ------------ABOUT---------------
 
-Adventure post or more technically, eberron-offerup, is a simple app where you can create fantasy mercenaries and job listings all while rating listings and posting comments!!
+Adventure post or more technically, eberron-offerup, is a simple app where you can create
+fantasy mercenaries and job listings all while rating listings and posting comments!!
 
 ## ------------LANDING PAGE---------------
 
