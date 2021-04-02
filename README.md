@@ -27,11 +27,11 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 Welcome to the ADVENTURE POST!
 
-------------ABOUT---------------
+## ------------ABOUT---------------
 
 Adventure post or more technically, eberron-offerup, is a simple app where you can create fantasy mercenaries and job listings all while rating listings and posting comments!!
 
-------------LANDING PAGE---------------
+## ------------LANDING PAGE---------------
 
 ![Landing Page](https://i.imgur.com/N7L3Uae.png)
 ![Landing Page logged in](https://i.imgur.com/Y2ML02r.png)
@@ -39,7 +39,7 @@ Adventure post or more technically, eberron-offerup, is a simple app where you c
 ![Mercenary Page](https://i.imgur.com/Ql1oNsh.png)
 ![Add Listing Page](https://i.imgur.com/lkYnKe0.png)
 
-------------TECHNOLOGIES USED---------------
+## ------------TECHNOLOGIES USED---------------
 
 * Node.js
 * Mongoose
@@ -49,7 +49,7 @@ Adventure post or more technically, eberron-offerup, is a simple app where you c
 * Method-Override
 * DotENV
 
-------------GETTING STARTED---------------
+## ------------GETTING STARTED---------------
 
 https://eberron-offerup.herokuapp.com/
 
@@ -61,6 +61,16 @@ https://eberron-offerup.herokuapp.com/
 * Click "ADD MERCENARY" to navigate to the "Add Mercenary" page.
 * Click "ADD LISTING" to navigate to the "Add listing" page.
 
-------------TRELLO BOARD---------------
+## ------------TRELLO BOARD---------------
 
 https://trello.com/b/ppZ7Cw0w/seir-project-2
+
+
+## ------------NEXT STEPS---------------
+
+1. Expanding the Mercenary model to include other attributes.
+  * add merc photo
+  * add equipment
+  * abilities attached to PC Classes
+3. EDIT LISTING
+4. REMOVE MERCENARY
