@@ -4,7 +4,6 @@ module.exports = {
   create,
   delete: deleteReview,
   update: updateReview,
-  edit: editReview,
 };
 
 function deleteReview(req, res, next) {
@@ -36,6 +35,7 @@ function create(req, res) {
     });
   });
 }
+
 function updateReview(req, res) {
   Listing.findOne({ "reviews._id": req.params.id }, function (err, listing) {
     const review = listing.reviews.id(req.params.id);
@@ -45,11 +45,5 @@ function updateReview(req, res) {
     listing.save(function (err) {
       res.redirect(`/listings/${listing._id}`);
     });
-  });
-}
-
-function editReview(req, res) {
-  Listing.findOne({ "reviews._id": req.params.id }, function (err, listing) {
-    res.render("listings/edit", { title: "Edit Review", listing });
   });
 }
