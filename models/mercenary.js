@@ -1,14 +1,15 @@
-var mongoose = require("mongoose");
-var Schema = mongoose.Schema;
+var mongoose = require('mongoose')
+var Schema = mongoose.Schema
 
 var mercenarySchema = new Schema(
   {
     name: { type: String, required: true, unique: true },
     characterClass: String,
+    characterHeritage: String,
   },
   {
     timestamps: true,
   }
-);
+)
 
-module.exports = mongoose.model("Mercenary", mercenarySchema);
+module.exports = mongoose.model('Mercenary', mercenarySchema)
