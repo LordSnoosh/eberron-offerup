@@ -14,9 +14,4 @@ exports.pcclass = [
   { name: 'WARLOCK' },
   { name: 'WIZARD' },
 ]
-exports.pcheritage = [
-  {
-    name: 'HUMAN',
-  },
-  { name: 'ELVEN' },
-]
+exports.pcheritage = [{ name: 'HUMAN' }, { name: 'ELVEN' }]
