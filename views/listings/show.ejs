@@ -14,7 +14,9 @@
   <div>Party:</div>
   <ul>
     <%- listing.party.map(m => `
-    <li value="${m._id}">${m.name}, ${m.characterClass}</li>
+    <li value="${m._id}">
+      ${m.name}, ${m.characterClass}, ${m.characterHeritage}
+    </li>
     ` ).join('') %>
   </ul>
   <div>Listing Details:</div>
@@ -29,7 +31,9 @@
 >
   <select name="mercenaryId">
     <%- mercenaries.map(m => `
-    <option value="${m._id}">${m.name}, ${m.characterClass}</option>
+    <option value="${m._id}">
+      ${m.name}, ${m.characterClass}, ${m.characterHeritage}
+    </option>
     ` ).join('') %>
   </select>
   <button type="submit">Add to Party</button>
@@ -82,7 +86,7 @@
           <button type="submit">X</button>
         </form>
         <form action="/reviews/<%= r._id %>?_method=PUT" method="POST">
-          <input name="content" value="<%=  %>">
+          <input name="content" value="<%=  %>" />
           <select name="rating">
             <option value="1">1</option>
             <option value="2">2</option>
