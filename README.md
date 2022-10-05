@@ -27,12 +27,12 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀
 
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-Welcome to the ADVENTURE POST!
+Welcome to the Eberron-Offerup!
 
 ## ------------ABOUT---------------
 
-Adventure post or more technically, eberron-offerup, is a simple app where you can create
-fantasy mercenaries and job listings all while rating listings and posting comments!!
+Eberron-Offerup, is a simple app where you can create
+fantasy mercenaries to add to job listings, rate those listings and post comments!!
 
 ## ------------LANDING PAGE---------------
 
@@ -44,36 +44,23 @@ fantasy mercenaries and job listings all while rating listings and posting comme
 
 ## ------------TECHNOLOGIES USED---------------
 
-* Node.js
-* Mongoose
-* Express-Generator
-* Express-Session
-* Passport
-* Method-Override
-* DotENV
+- Node.js
+- Mongoose
+- Express-Generator
+- Express-Session
+- Passport
+- Method-Override
+- DotENV
 
 ## ------------GETTING STARTED---------------
 
-https://eberron-offerup.herokuapp.com/
+- As of 10/1/2022 this project is back under development for
+  further improvements and will be deployed as soon as possible.
 
-* Click the above link to be directed to the landing page.
-* Click "LOG IN" to authenticate via Google.
-* Click "ALL LISTINGS" to navigate to the "All Listings" page.
-* Click "DETAILS" button, to navigate to a "Listing Details" page.
-* Click "REMOVE" button to delete a listing, the user created.
-* Click "ADD MERCENARY" to navigate to the "Add Mercenary" page.
-* Click "ADD LISTING" to navigate to the "Add listing" page.
+## ------------DEVELOPMENT STEPS---------------
 
-## ------------TRELLO BOARD---------------
-
-https://trello.com/b/ppZ7Cw0w/seir-project-2
-
-
-## ------------NEXT STEPS---------------
-
-1. Expanding the Mercenary model to include other attributes.
-  * add merc photo
-  * add equipment
-  * abilities attached to PC Classes
-3. EDIT LISTING
+1. EXPANSION OF MERCENARY MODEL
+2. EDIT LISTING
+3. VIEW MY MERCS
 4. REMOVE MERCENARY
+5. INTEGRATE D&D API
