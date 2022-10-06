@@ -100,7 +100,7 @@ nav > a.active {
 }
 #review-form > table thead th {
   padding: 5px;
-  border-bottom: 2px solid #db2d20;
+  border-bottom: 2px solid black;
 }
 #review-form > table td {
   padding: 10px;
@@ -114,18 +114,16 @@ nav > a.active {
 }
 #list a {
   border-radius: 4px;
-  background-color: #8f140b;
+  border-color: black;
+  border-style: groove;
+  border-width: 2px;
   padding: 4px;
   text-decoration: none;
   font-size: 14px;
 }
 #list a:hover {
-  background-color: rgb(167, 23, 23);
-}
-#remove {
-  border-radius: 4px;
-  background-color: aquamarine;
-  padding: 4px;
+  color: white;
+  background-color: #640707;
 }
 
 /* The various forms and buttons */
@@ -149,4 +147,22 @@ nav > a.active {
   grid-column: span 2;
   width: 10rem;
   margin-left: auto;
+}
+#list input,
+#new-form input,
+#add-review-form input,
+#add-mercenary-form input,
+#add-merc-to-party input {
+  border-radius: 4px;
+  border-style: groove;
+  border-width: 2px;
+  padding: 4px;
+}
+#list input:hover,
+#new-form input:hover,
+#add-review-form input:hover,
+#add-mercenary-form input:hover,
+#add-merc-to-party input:hover {
+  color: white;
+  background-color: #640707;
 }
