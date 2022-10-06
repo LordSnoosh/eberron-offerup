@@ -3,7 +3,6 @@
   font-family: 'Acme', sans-serif;
   color: #0f1213;
 }
-
 body {
   margin: 0;
   height: 100vh;
@@ -13,22 +12,6 @@ body {
     'nav'
     'main';
 }
-
-body > nav {
-  grid-area: nav;
-  background-color: #756966;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 20px 0 30px;
-}
-
-nav > img {
-  width: 56px;
-  object-fit: contain;
-  margin-right: auto;
-}
-
 body > main {
   grid-area: main;
   display: flex;
@@ -38,7 +21,6 @@ body > main {
   padding: 20px;
   overflow-y: scroll;
 }
-
 body > main h1:first-child,
 h6 {
   margin-bottom: 50px;
@@ -48,13 +30,19 @@ h6 {
   border-color: #0f1213;
   border-width: 2px;
 }
-
-#homeDragon {
-  width: 65vmin;
-  object-fit: contain;
-  margin-bottom: 0;
+body > nav {
+  grid-area: nav;
+  background-color: #756966;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 30px;
 }
-
+nav > img {
+  width: 56px;
+  object-fit: contain;
+  margin-right: auto;
+}
 nav > a {
   margin: 20px;
   text-decoration: underline;
@@ -64,106 +52,13 @@ nav > a {
   border-color: #200202;
   border-width: 2px;
 }
-
 nav > a:hover:not(.active) {
   color: white;
   background-color: #640707;
 }
-
 nav > a.active {
   color: white;
   cursor: default;
-}
-
-#new-form {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(2, minmax(auto, 22rem));
-}
-
-#new-form *,
-#add-review-form *,
-#add-performer-form * {
-  font-size: 20px;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-#new-form input[type='submit'] {
-  grid-column: span 2;
-  width: 10rem;
-  margin-left: auto;
-}
-
-table {
-  font-size: 20px;
-}
-
-table thead th {
-  padding: 5px;
-  border-bottom: 2px solid #424748;
-}
-
-table td {
-  padding: 10px;
-  text-align: center;
-}
-
-#list td:nth-child(2),
-#list td:nth-child(3) {
-  min-width: 100px;
-}
-
-#list a {
-  border-radius: 4px;
-  background-color: #0b748f;
-  padding: 4px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-#remove {
-  border-radius: 4px;
-  background-color: aquamarine;
-  padding: 4px;
-}
-
-#list a:hover {
-  background-color: rgb(167, 23, 23);
-}
-
-#show-page {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1rem;
-}
-
-#show-page div:nth-child(even) {
-  font-weight: bold;
-}
-
-#add-review-form,
-#add-performer-form {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-#add-review-form input[type='submit'],
-#add-performer-form input[type='submit'] {
-  width: 10rem;
-  grid-column: 2 / 3;
-}
-
-ul {
-  margin: 0 0 1rem;
-  padding: 0;
-  list-style: none;
-}
-
-li {
-  font-weight: bold;
 }
 
 .login {
@@ -172,18 +67,98 @@ li {
   align-items: center;
   height: 34px;
 }
-
 .login img {
   height: 30px;
 }
-
 .review-user {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .review-user img {
   border-radius: 50%;
   height: 40px;
+}
+
+#review-form > table {
+  font-size: 20px;
+}
+#review-form > table thead th {
+  padding: 5px;
+  border-bottom: 2px solid #424748;
+}
+#review-form > table td {
+  padding: 10px;
+  text-align: center;
+}
+#homeDragon {
+  width: 65vmin;
+  object-fit: contain;
+  margin-bottom: 0;
+}
+#new-form {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, minmax(auto, 22rem));
+}
+#new-form *,
+#add-review-form *,
+#add-mercenary-form *,
+#add-merc-to-party * {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
+#new-form input[type='submit'],
+#review-form input[type='submit'] {
+  grid-column: span 2;
+  width: 10rem;
+  margin-left: auto;
+}
+#list td:nth-child(2),
+#list td:nth-child(3) {
+  min-width: 100px;
+}
+#list a {
+  border-radius: 4px;
+  background-color: #0b748f;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 14px;
+}
+#list a:hover {
+  background-color: rgb(167, 23, 23);
+}
+
+#show-page * {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  border-style: groove;
+  border-width: 2px;
+  border-radius: 5px;
+}
+#show-page div:nth-child(even) {
+  font-weight: bold;
+  border-color: #0b748f;
+}
+
+#add-review-form,
+#add-mercenary-form,
+#add-merc-to-party {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+}
+#add-review-form input[type='submit'],
+#add-mercenary-form input[type='submit'],
+#add-merc-to-party input[type='submit'] {
+  width: 10rem;
+  grid-column: 2 / 3;
+}
+#remove {
+  border-radius: 4px;
+  background-color: aquamarine;
+  padding: 4px;
 }
