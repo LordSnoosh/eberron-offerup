@@ -10,17 +10,17 @@
   <title><%= title %></title>
 </head>
 <body>
-  <nav>
-    <a href="/listings" <%- title === 'All Listings' ? 'class="active"' : '' %>>ALL LISTINGS</a>
+  <nav class="nav" id="navBar">
+    <a href="/listings" id="listingNav" <%- title === 'All Listings' ? 'class="active"' : '' %>>ALL LISTINGS</a>
     <% if (user) { %>
-      <a href="/mercenaries/new"	<%- title === 'Add Mercenary' ? 'class="active"' : '' %>>
+      <a href="/mercenaries/new"	id="mercsNav"<%- title === 'Add Mercenary' ? 'class="active"' : '' %>>
       ADD MERCENARY</a>
-      <a href="/listings/new" <%- title === 'Add Listing' ? 'class="active"' : '' %>>ADD LISTING</a>
+      <a href="/listings/new" id="listingNew" <%- title === 'Add Listing' ? 'class="active"' : '' %>>ADD LISTING</a>
       <a href="/logout">LOG OUT</a>
     <% } else { %>
-      <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+      <a href="/auth/google" id="logIn" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
     <% } %>
   </nav>
   <main>
-    <h1><%= title %></h1>
+    <h1 id="title"><%= title %></h1>
     

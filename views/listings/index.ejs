@@ -9,13 +9,14 @@
       <th></th>
     </tr>
   </thead>
+
   <tbody>
     <% listings.forEach(function(l) { %>
     <tr>
       <td>
         <% if (user && user._id.equals(l.user)) { %>
         <form action="/listings/<%= l._id %>?_method=DELETE" method="POST">
-          <button type="submit">REMOVE</button>
+          <button id="remove" type="submit">REMOVE</button>
         </form>
         <% } %>
       </td>

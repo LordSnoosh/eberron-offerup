@@ -10,13 +10,13 @@ body {
   display: grid;
   grid-template-rows: 89px 1fr;
   grid-template-areas:
-    "nav"
-    "main";
+    'nav'
+    'main';
 }
 
 body > nav {
   grid-area: nav;
-  background-color: #5c413b;
+  background-color: #756966;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -34,13 +34,19 @@ body > main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #cabaab;
+  background-color: #a19c97;
   padding: 20px;
   overflow-y: scroll;
 }
 
-body > main h1:first-child, h6 {
+body > main h1:first-child,
+h6 {
   margin-bottom: 50px;
+  padding: 10px;
+  border-style: groove;
+  border-radius: 5px;
+  border-color: #0f1213;
+  border-width: 2px;
 }
 
 #homeDragon {
@@ -51,9 +57,12 @@ body > main h1:first-child, h6 {
 
 nav > a {
   margin: 20px;
-  text-decoration: none;
+  text-decoration: underline;
   padding: 10px;
   border-radius: 5px;
+  border-style: groove;
+  border-color: #200202;
+  border-width: 2px;
 }
 
 nav > a:hover:not(.active) {
@@ -80,7 +89,7 @@ nav > a.active {
   border-radius: 5px;
 }
 
-#new-form input[type="submit"] {
+#new-form input[type='submit'] {
   grid-column: span 2;
   width: 10rem;
   margin-left: auto;
@@ -107,14 +116,20 @@ table td {
 
 #list a {
   border-radius: 4px;
-  background-color: #b8c0c2;
+  background-color: #0b748f;
   padding: 4px;
   text-decoration: none;
   font-size: 14px;
 }
 
+#remove {
+  border-radius: 4px;
+  background-color: aquamarine;
+  padding: 4px;
+}
+
 #list a:hover {
-  background-color: white;
+  background-color: rgb(167, 23, 23);
 }
 
 #show-page {
@@ -135,8 +150,8 @@ table td {
   margin-bottom: 2rem;
 }
 
-#add-review-form input[type="submit"],
-#add-performer-form input[type="submit"] {
+#add-review-form input[type='submit'],
+#add-performer-form input[type='submit'] {
   width: 10rem;
   grid-column: 2 / 3;
 }
