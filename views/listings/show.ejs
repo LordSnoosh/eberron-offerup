@@ -1,26 +1,28 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-  <div>Title:</div>
-  <div><%= listing.title %></div>
-  <div>Meeting Place:</div>
-  <div><%= listing.meetingPlace %></div>
-  <div>Challenge Rating:</div>
-  <div><%= listing.challengeRating %></div>
-  <div>Recommended Professions:</div>
-  <ul>
-    <li><%= listing.recClass %></li>
-  </ul>
-  <div>Party:</div>
-  <ul>
-    <%- listing.party.map(m => `
-    <li value="${m._id}">
-      ${m.name}, ${m.characterClass}, ${m.characterHeritage}
-    </li>
-    ` ).join('') %>
-  </ul>
-  <div>Listing Details:</div>
-  <div><%= listing.content %></div>
+  <div class="container" id="listingBody">
+    <div>Title:</div>
+    <div><%= listing.title %></div>
+    <div>Meeting Place:</div>
+    <div><%= listing.meetingPlace %></div>
+    <div>Challenge Rating:</div>
+    <div><%= listing.challengeRating %></div>
+    <div>Recommended Professions:</div>
+    <ul>
+      <li><%= listing.recClass %></li>
+    </ul>
+    <div>Party:</div>
+    <ul>
+      <%- listing.party.map(m => `
+      <li value="${m._id}">
+        ${m.name}, ${m.characterClass}, ${m.characterHeritage}
+      </li>
+      ` ).join('') %>
+    </ul>
+    <div>Listing Details:</div>
+    <div><%= listing.content %></div>
+  </div>
 </section>
 
 <br /><br />
