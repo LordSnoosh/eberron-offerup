@@ -16,7 +16,7 @@
       <td>
         <% if (user && user._id.equals(l.user)) { %>
         <form action="/listings/<%= l._id %>?_method=DELETE" method="POST">
-          <input type="button" value="REMOVE" />
+          <input type="submit" value="REMOVE" />
         </form>
         <% } %>
       </td>

@@ -50,7 +50,7 @@ nav > a {
   padding: 10px;
   border-radius: 5px;
   border-style: groove;
-  border-color: #200202;
+  border-color: black;
   border-width: 2px;
 }
 nav > a:hover:not(.active) {
@@ -139,12 +139,12 @@ nav > a.active {
   padding: 5px;
   border-radius: 5px;
 }
-#list input,
-#new-form input,
-#review-form input,
-#add-review-form input,
-#add-mercenary-form input,
-#add-merc-to-party input {
+#list input[type='submit'],
+#new-form input[type='submit'],
+#review-form input[type='submit'],
+#add-review-form input[type='submit'],
+#add-mercenary-form input[type='submit'],
+#add-merc-to-party input[type='submit'] {
   grid-column: span 2;
   width: 10rem;
   margin-left: auto;
@@ -154,12 +154,12 @@ nav > a.active {
   padding: 4px;
 }
 
-#list input:hover,
-#new-form input:hover,
-#review-form input:hover,
-#add-review-form input:hover,
-#add-mercenary-form input:hover,
-#add-merc-to-party input:hover {
+#list input[type='submit']:hover,
+#new-form input[type='submit']:hover,
+#review-form input[type='submit']:hover,
+#add-review-form input[type='submit']:hover,
+#add-mercenary-form input[type='submit']:hover,
+#add-merc-to-party input[type='submit']:hover {
   color: white;
   background-color: #640707;
 }
