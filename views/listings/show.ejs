@@ -67,25 +67,24 @@
 </form>
 <% } %> 
 
-<% if (listing.reviews.length) { %>
-<table id="review-form">
-    <% let total = 0 %> <% listing.reviews.forEach(function(r) { %> <% total +=
-    r.rating %>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Date</th>
-      <th>Review</th>
-      <th>Rating</th>
-      <th>Edit Options</th> 
-      <th>Total Rating</th>
-      <td>
-        <strong><%= (total / listing.reviews.length).toFixed(1) %></strong>
-      </td>
-    </tr>
-  </thead>
 
-  <tbody>
+  <table id="review-top">  
+  <td>
+      <td>User</td>
+      <td>Date</td>
+      <td>Review</td>
+      <td>Rating</td>
+      <td>Edit Options</td> 
+
+  </td>
+</table>
+
+
+
+<% if (listing.reviews.length) { %>
+<% let total = 0 %> <% listing.reviews.forEach(function(r) { %> 
+<table id="review-form">
+<tbody>
     <tr>
       <td class="review-user">
         <img src="<%= r.userAvatar %>" /><%= r.userName %>
@@ -93,9 +92,8 @@
       <td><%= r.createdAt.toLocaleDateString() %></td>
       <td><%= r.content %></td>
       <td><%= r.rating %></td>
-      <td>
-        <% if (user && user._id.equals(r.user)) { %>
-
+<td>
+<% if (user && user._id.equals(r.user)) { %>
         <form action="/reviews/<%= r._id %>?_method=PUT" method="POST">
           <select name="rating">
             <option value="1">1</option>
@@ -107,18 +105,19 @@
           <input name="content" value="<%=  %>" />
           <input type="submit" value="Edit" />
         </form>
-        <td> 
-          <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+      <td> 
+        <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
           <input type="submit" value="X" />
         </form>
       </td>
-        <% } %>
-      </td>
-    </tr>
-    <% }); %>
-  
-  </tbody>
+      <% } %>
+</td>   
+</tr>
+</tbody>
 </table>
+<% }); %>
 <% } else { %>
 <h5>No Reviews Yet</h5>
-<% } %> <%- include('../partials/footer') %>
+<% } %> 
+
+<%- include('../partials/footer') %>

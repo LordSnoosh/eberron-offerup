@@ -106,6 +106,13 @@ nav > a.active {
   padding: 10px;
   text-align: center;
 }
+#review-top {
+  grid-area: span;
+  background-color: #756966;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* All listings page */
 #list td:nth-child(2),
